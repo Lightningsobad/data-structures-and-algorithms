@@ -1,8 +1,4 @@
-#include <iostream>
-#include <iomanip>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -67,7 +63,7 @@ int add(List &L, SinhVien sv) {	//them mot sinh vien vao cuoi danh sach
 	if(full(L))
 		return 0;
 	else {
-		L.count ++;
+		L.count++;
 		L.e[L.count] = sv;
 		return 1;
 	}
@@ -95,7 +91,6 @@ void input(List &L) {
 void hien_thi_SV(SinhVien sv) {
 	printf("|%-10s|%-10s|%-10s|%-10s|%-10d|%-15.1f|\n", sv.id
 	, sv.last_name, sv.name, sv.gioi_tinh, sv.yob, sv.gpa);
-	
 }
 
 void hien_thi_DS(List L) {
