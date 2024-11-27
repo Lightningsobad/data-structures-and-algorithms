@@ -30,6 +30,8 @@ void chenVaoDauDanhSach(Tro &L, HangHoa hh);
 void xoaPTThuBa(Tro &L);
 void sapXepGiamDanNoiBot(Tro &L);
 
+Tro timkiemTheoTen(Tro L, char* ten);
+
 
 int main() {
 	Tro L;
@@ -43,6 +45,9 @@ int main() {
 	cout << "__________DANH SACH HANG HOA SAU KHI CHEN__________" << endl;
 	chenVaoDauDanhSach(L, taoHH(2007, "Phan", "Hop", 15, 3000));
 	hienthiDanhSach(L);
+	
+	cout << "__________TIM KIEM HANG HOA THEO TEN (VO)__________" << endl;
+	hienThiHangHoa((timkiemTheoTen(L, "Vo") -> infor));
 }
 
 void creat(Tro &L) {
@@ -129,6 +134,17 @@ void xoaPTThuBa(Tro &L) {
 	Q -> next = P -> next;
 	delete P;
 }
+
+Tro timkiemTheoTen(Tro L, char* ten) {
+	Tro Q; 
+	Q = L; 
+	while(Q != NULL){
+		if((strcmp((Q -> infor).tenHang, ten) == 0))
+			return Q;
+		Q = Q -> next;
+	}
+	return NULL;
+} 
 
 void sapXepGiamDanNoiBot(Tro &L) {
 	Tro P, Q;

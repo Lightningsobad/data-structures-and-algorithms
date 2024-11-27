@@ -33,7 +33,7 @@ int main() {
 	input(L);
 	cout << "=====================DANH SACH SINH VIEN=============================" << endl;
 	hien_thi_DS(L);
-	cout << "====================================================================" << endl;
+	cout << "=======================================================================" << endl;
 	cout << "==============DANH SACH SAU KHI XOA PHAN TU DAU TIEN=================" << endl;
 	xoa_Sv_dautien(L);
 	hien_thi_DS(L);
@@ -41,7 +41,7 @@ int main() {
 	cout << "===========CHEN THEM SINH VIEN VAO VI TRI THU BA=======================" << endl;
 	chenvaoViTriThuBa(L);
 	hien_thi_DS(L);
-	cout << "============SAP XEP THEO TEN TANG DAN==================================" << endl;
+	cout << "===============SAP XEP THEO TEN TANG DAN==================================" << endl;
 	sap_xep_theo_ten(L);
 	hien_thi_DS(L);
 }

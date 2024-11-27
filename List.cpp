@@ -29,6 +29,8 @@ void insert(tro &L, tro Q, SinhVien sv);
 void chenVaoViTriThuBa(tro &L);
 void sapxepchon(tro &L);
 
+void xoaViTriThu3(tro &L);
+
 int main() {
 	tro L;
 	creat(L);
@@ -45,6 +47,9 @@ int main() {
 ////	hienthiSinhVien(search_k(L, 4)->infor);
 	cout << "Sap xep: " << endl;
 	sapxepchon(L);
+	hienthidanhSach(L);
+	cout << "Xoa vi tri thu ba: " << endl;
+	xoaViTriThu3(L);
 	hienthidanhSach(L);
 }
 
@@ -165,6 +170,14 @@ void sapxepchon(tro &L){
 	
 		
 }
+}
+
+void xoaViTriThu3(tro &L) {
+	tro P, Q;
+	Q = L -> next;
+	P = Q -> next;
+	Q -> next = P -> next;
+	delete P;
 }
 
 

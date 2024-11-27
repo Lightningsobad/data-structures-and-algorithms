@@ -9,7 +9,9 @@ long tinhGT(int n);				//tinh n!
 long tinhFibonaci(int n);		// tim so fibonaci thu n
 void giaiBaiToanThapHaNoi(int n, char A, char B, char C); // n la so dia can chuyen
 float tinhAcker(int m, int n);
-
+int tinhUCLN(int a, int b);
+int tinhF(int n);
+int F(int n);
 
 int main() {
 	//hello();
@@ -18,7 +20,10 @@ int main() {
 	//cout << n << "! = " << tinhGT(n);
 	//cout << tinhFibonaci(n);
 	//giaiBaiToanThapHaNoi(n, 'A', 'B', 'C');
-	cout << "Acker = " << tinhAcker(3, 5);
+	//cout << "Acker = " << tinhAcker(3, 5);
+	cout << tinhUCLN(45, 75) << endl;
+	cout << tinhF(5) << endl;
+	cout << F(8);
 	
 }
 
@@ -65,6 +70,31 @@ float tinhAcker(int m, int n) {
 	else
 		return tinhAcker(m - 1, tinhAcker(m, n - 1));
 }
+
+int tinhUCLN(int a, int b) {
+	if(b == 0)
+		return a;
+	else
+		return tinhUCLN(b, a % b);
+}
+
+int tinhF(int n) {
+	if(n <= 0)
+		return 0;
+	else
+		return 2 * n + tinhF(n - 1);
+}
+
+int F(int n) {
+	if(n == 1)
+		return 4;
+	else if(n == 2)
+		return 3;
+	else
+		return F(n - 1) - F(n - 2) - 1;
+}
+
+
 
 
 

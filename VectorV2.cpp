@@ -105,8 +105,7 @@ void inDanhSach(List &L) {
 void xoaPTThuBa(List &L) {
 	if(empty(L)){
 		cout << "Danh sach rong";
-		return;
-		
+		return;		
 	}
 	for(int i = 3; i <= L.count; i++){
 		L.e[i - 1] = L.e[i];
